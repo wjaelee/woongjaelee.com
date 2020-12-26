@@ -6,14 +6,17 @@ import Layout from 'components/Layout';
 import SEO from 'components/SEO';
 import Container from 'components/ui/Container';
 import TitleSection from 'components/ui/TitleSection';
-import FormatHtml from 'components/utils/FormatHtml';
+import MarkdownHtml from 'components/utils/MarkdownHtml';
+import Commento from 'components/Commento';
 
 import * as Styled from './styles';
+import Bio from 'components/Bio';
 
 interface Post {
   html: React.ReactNode;
   fields: {
     slug: string;
+    readingTime: any;
   };
   frontmatter: {
     title: string;
@@ -40,24 +43,30 @@ const BlogPost: React.FC<Props> = ({ data, pageContext }) => {
     <Layout>
       <SEO title={post.frontmatter.title} />
       <Container section>
-        <TitleSection title={post.frontmatter.date} subtitle={post.frontmatter.title} />
-        <FormatHtml content={post.html} />
+        <TitleSection
+          title={post.frontmatter.date}
+          subtitle={post.frontmatter.title}
+          readingTime={post.fields.readingTime.text}
+        />
+        <MarkdownHtml content={post.html} />
+        <Bio />
         <Styled.Links>
           <span>
             {previous && (
               <Link to={previous.fields.slug} rel="previous">
-                ← {previous.frontmatter.title}
+                ← Previous
               </Link>
             )}
           </span>
           <span>
             {next && (
               <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
+                Next →
               </Link>
             )}
           </span>
         </Styled.Links>
+        <Commento id={post.frontmatter.title} />
       </Container>
     </Layout>
   );
@@ -69,6 +78,11 @@ export const query = graphql`
   query BlogPostBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      fields {
+        readingTime {
+          text
+        }
+      }
       frontmatter {
         title
         date(formatString: "MMM DD, YYYY")

@@ -6,4 +6,6 @@ startDate: 'Oct 2019'
 endDate: 'Jan 2020'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Built a sentiment analyzer that extracts soft, behavioral profiles from free-form text responses of job candidates
+
+Tools: **NLTK, SpaCy, Gensim**

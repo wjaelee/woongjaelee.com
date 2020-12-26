@@ -1,8 +1,8 @@
 ---
 category: 'hero section'
-title: 'Frontend Developer'
-subtitle: 'I am the Great Gatsby'
-content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.'
+title: 'Student Adventurer & Software Engineer'
+subtitle: "Hi there! I'm Woongjae 👋"
+content: "I'm a mathematician and a software engineer aspiring to change people's lives for the better. I think of research as finding the beauty and the truth in the uncharted territories. Come and join me on the journey! We will have so much fun :)"
 linkTo: '/resume/'
-linkText: 'View My Profile'
+linkText: 'View My Resume'
 ---

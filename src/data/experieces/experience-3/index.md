@@ -6,6 +6,8 @@ startDate: 'Jun 2020'
 endDate: 'Aug 2020'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Built an end-to-end single image depth estimation and plane detection framework for prototype AR glass.
 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Reduced plane detection time by 50% through parallel processing with C++ OpenMP API.
+
+Tools: **Numpy, PyTorch, OpenCV, OpenMP**

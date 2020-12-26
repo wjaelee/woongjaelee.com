@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `WOONGJAE LEE`,
+    title: `Woongjae Lee`,
     description: `A personal blog by Woongjae Lee`,
     author: `Woongjae Lee`
   },
@@ -26,12 +26,25 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false
+            }
+          },
+          {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 768,
               linkImagesToOriginal: false
             }
-          }
+          },
+          {
+            resolve: 'gatsby-remark-reading-time',
+          },
         ]
       }
     },

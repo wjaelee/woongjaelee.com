@@ -4,3 +4,18 @@
 /* purgecss end ignore */
 
 @import 'tailwindcss/utilities';
+
+/* purgecss start ignore */
+.markdown img {
+  border-radius: 0.3rem;
+  width: 100%;
+}
+
+.markdown code::before {
+  content: "";
+}
+
+.markdown code::after {
+  content: "";
+}
+/* purgecss end ignore */

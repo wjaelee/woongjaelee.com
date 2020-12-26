@@ -9,21 +9,21 @@ interface MainNavItem {
 
 const mainNavItems: MainNavItem[] = [
   {
-    title: 'About Me',
-    slug: '/'
+    title: 'About',
+    slug: '/about-me/'
   },
   {
     title: 'Blog',
     slug: '/blog/'
   },
   {
+    title: 'Projects',
+    slug: '/projects/'
+  },
+  {
     title: 'Resume',
     slug: '/resume/'
   },
-  // {
-  //   title: 'Contact Me',
-  //   slug: '/contact/'
-  // }
 ];
 
 const MainNav: React.FC = () => {
