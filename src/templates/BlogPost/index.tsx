@@ -66,7 +66,7 @@ const BlogPost: React.FC<Props> = ({ data, pageContext }) => {
             )}
           </span>
         </Styled.Links>
-        <Commento id={post.frontmatter.title} />
+        {/* <Commento id={post.frontmatter.title} /> */}
       </Container>
     </Layout>
   );

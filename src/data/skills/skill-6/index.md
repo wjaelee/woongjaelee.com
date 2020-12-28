@@ -1,5 +1,5 @@
 ---
 category: 'skills'
-title: 'Gatsby'
+title: 'OpenCV'
 percentage: 68
 ---

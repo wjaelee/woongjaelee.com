@@ -1,5 +1,5 @@
 ---
 category: 'skills'
-title: 'Illustrator'
+title: 'Numpy'
 percentage: 41
 ---
