@@ -6,39 +6,35 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "_data/blog"
+  - name: 'blog'
+    label: 'Blog'
+    folder: '_data/blog'
     create: true
-    slug: "{{year}}-{{month}-{{day}}-{{slug}}"
+    slug: '{{year}}-{{month}-{{day}}-{{slug}}'
     fields:
-      - label: "Category"
-        name: "category"
-        widget: "string"
-        default: "blog"
-      - label: "Title"
-        name: "title"
-        widget: "string"
-      - label: "Description"
-        name: "description"
-        widget: "string"
-      - label: "Date"
-        name: "date"
-        widget: "datetime"
-      - label: "Tags"
-        name: "tags"
-        widget: "list"
-      - label: "Published"
-        name: "published"
-        widget: "boolean"
+      - label: 'Category'
+        name: 'category'
+        widget: 'string'
+        default: 'blog'
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
+      - label: 'Description'
+        name: 'description'
+        widget: 'string'
+      - label: 'Date'
+        name: 'date'
+        widget: 'datetime'
+      - label: 'Tags'
+        name: 'tags'
+        widget: 'list'
+      - label: 'Published'
+        name: 'published'
+        widget: 'boolean'
         default: true
-      - label: "Cover"
-        name: "cover"
-        widget: "image"
-        required: true
-        media_library:
-          config:
-            multiple: false
-      - label: "Body"
-        name: "body"
-        widget: "markdown"
+      - label: 'Cover'
+        name: 'cover'
+        widget: 'string'
+      - label: 'Body'
+        name: 'body'
+        widget: 'markdown'
