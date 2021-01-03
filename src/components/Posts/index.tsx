@@ -33,6 +33,8 @@ interface Post {
 }
 
 const Posts: React.FC = () => {
+  // const { data } = Posts.props;
+  // const { edges: posts } = data.allMarkdownRemark;
   const { markdownRemark, allMarkdownRemark } = useStaticQuery(graphql`
     query {
       markdownRemark(frontmatter: { category: { eq: "blog section" } }) {
