@@ -87,6 +87,9 @@ collections:
   - name: 'blog'
     label: 'Blog'
     folder: '_data/blog'
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
     create: true
     slug: '{{slug}}'
     fields:
@@ -112,7 +115,7 @@ collections:
         default: true
       - label: 'Cover'
         name: 'cover'
-        widget: 'string'
+        widget: 'image'
       - label: 'Body'
         name: 'body'
         widget: 'markdown'
