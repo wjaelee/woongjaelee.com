@@ -50,25 +50,26 @@ collections:
     create: true
     slug: '{{slug}}'
     fields:
-      - label: 'Category'
-        name: 'category'
-        widget: 'string'
-        default: 'education'
-      - label: 'University'
-        name: 'university'
-        widget: 'string'
-      - label: 'Degree'
-        name: 'degree'
-        widget: 'string'
-      - label: 'Start Date'
-        name: 'startDate'
-        widget: 'string'
-      - label: 'End Date'
-        name: 'endDate'
-        widget: 'string'
-      - label: 'Body'
-        name: 'body'
-        widget: 'markdown'
+      - { label: Category, name: category, widget: string, default: 'education' }
+      - { label: 'University', name: 'university', widget: 'string' }
+      - { label: 'Degree', name: 'degree', widget: 'string' }
+      - { label: 'Start Date', name: 'startDate', widget: 'string' }
+      - { label: 'End Date', name: 'endDate', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'life-updates'
+    label: 'Life Updates'
+    folder: '_data/life-updates'
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: Category, name: category, widget: string, default: 'news' }
+      - { label: Title, name: title, widget: 'string' }
+      - { label: Content, name: content, widget: 'string' }
+      - { label: 'News Date', name: 'newsDate', widget: 'string' }
+      - { label: 'Published', name: 'published', widget: 'boolean', default: true }
   - label: 'Site Metadata'
     name: 'site-metadata'
     files:
