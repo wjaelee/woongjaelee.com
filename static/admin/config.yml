@@ -58,6 +58,15 @@ collections:
           - { label: Category, name: category, widget: string }
           - { label: Title, name: title, widget: string }
           - { label: Subtitle, name: subtitle, widget: string }
+      - label: 'Landing - Recent Blog Posts'
+        name: 'recent blog posts'
+        file: '_data/site-metadata/recent-blog-posts.md'
+        fields:
+          - { label: Category, name: category, widget: string }
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string }
+          - { label: Link to, name: linkTo, widget: string }
+          - { label: Link Text, name: linkText, widget: string }
       - label: 'Landing - Life Updates'
         name: 'life updates'
         file: '_data/site-metadata/life-updates.md'
