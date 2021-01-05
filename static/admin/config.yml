@@ -6,16 +6,75 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-  - label: 'Pages'
-    name: 'pages'
+  - label: 'Site Metadata'
+    name: 'site-metadata'
     files:
       - label: 'About Page'
         name: 'about'
-        file: '_data/pages/about.md'
+        file: '_data/site-metadata/about.md'
         fields:
           - { label: Category, name: category, widget: string }
           - { label: Title, name: title, widget: string }
           - { label: Body, name: body, widget: markdown }
+      - label: 'Blog Page'
+        name: 'blog'
+        file: '_data/site-metadata/blog.md'
+        fields:
+          - { label: Category, name: category, widget: string }
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string }
+      - label: 'Projects Page'
+        name: 'projects'
+        file: '_data//projects.md'
+        fields:
+          - { label: Category, name: category, widget: string }
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string }
+      - label: 'Resume - Work Experience'
+        name: 'work experience'
+        file: '_data/site-metadata/resume-work-experience.md'
+        fields:
+          - { label: Category, name: category, widget: string }
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string }
+      - label: 'Resume - Research'
+        name: 'research'
+        file: '_data/site-metadata/research.md'
+        fields:
+          - { label: Category, name: category, widget: string }
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string }
+      - label: 'Resume - Education'
+        name: 'education'
+        file: '_data/site-metadata/education.md'
+        fields:
+          - { label: Category, name: category, widget: string }
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string }
+      - label: 'Resume - Skills'
+        name: 'skills'
+        file: '_data/site-metadata/skills.md'
+        fields:
+          - { label: Category, name: category, widget: string }
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string }
+      - label: 'Landing - Life Updates'
+        name: 'life updates'
+        file: '_data/site-metadata/life-updates.md'
+        fields:
+          - { label: Category, name: category, widget: string }
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string }
+      - label: 'Newsletter'
+        name: 'newsletter'
+        file: '_data/site-metadata/newsletter.md'
+        fields:
+          - { label: Category, name: category, widget: string }
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string }
+          - { label: NamePlaceholder, name: namePlaceholder, widget: string }
+          - { label: EmailPlaceholder, name: emailPlaceholder, widget: string }
+          - { label: SubmitPlaceholder, name: submitPlaceholder, widget: string }
   - name: 'blog'
     label: 'Blog'
     folder: '_data/blog'

@@ -25,7 +25,7 @@ interface News {
 const News: React.FC = () => {
   const { markdownRemark, allMarkdownRemark } = useStaticQuery(graphql`
     query {
-      markdownRemark(frontmatter: { category: { eq: "news section" } }) {
+      markdownRemark(frontmatter: { category: { eq: "life updates section" } }) {
         frontmatter {
           title
           subtitle

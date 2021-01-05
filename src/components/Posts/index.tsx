@@ -76,6 +76,7 @@ const Posts: React.FC = () => {
     }
   `);
 
+  console.log("markdownremark", markdownRemark)
   const sectionTitle: SectionTitle = markdownRemark.frontmatter;
   const posts: Post[] = allMarkdownRemark.edges;
 

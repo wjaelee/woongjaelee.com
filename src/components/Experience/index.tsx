@@ -24,7 +24,7 @@ interface Experience {
 const Experience: React.FC = () => {
   const { markdownRemark, allMarkdownRemark } = useStaticQuery(graphql`
     query {
-      markdownRemark(frontmatter: { category: { eq: "experiences section" } }) {
+      markdownRemark(frontmatter: { category: { eq: "work experience section" } }) {
         frontmatter {
           title
           subtitle
