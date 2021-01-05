@@ -6,6 +6,8 @@ date: 2021-01-05T05:55:40.054Z
 tags:
   - test
 published: true
-cover: 0010_0_0.png
+cover: 0003_0_0.png
 ---
-This is just a test. 
+![Cool](0010_0_0.png "COOL!")
+
+This is just a test.
