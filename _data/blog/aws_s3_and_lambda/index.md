@@ -1,15 +1,15 @@
 ---
-category: 'blog'
-cover: './aws_lambda_s3.png'
-title: 'Resize Images Stored in AWS S3 with AWS Lambda (feat. Docker)'
-description: 'A blog post on how to resize images stored in AWS S3 with AWS Lambda'
-date: '2020-04-27'
+category: blog
+title: Resize Images Stored in AWS S3 with AWS Lambda (feat. Docker)
+description: A blog post on how to resize images stored in AWS S3 with AWS Lambda
+date: 2020-04-27
 tags:
-  - 'Web Development'
+  - Web Development
 published: true
+cover: ./aws_lambda_s3.png
 ---
 
-![Blog Post Thumbnail](/aws_lambda_s3.png)
+![Blog Post Thumbnail](./aws_lambda_s3.png)
 
 **Note: An AWS Account and a basic knowledge of their services are assumed throughout this blog post**
 
@@ -30,6 +30,8 @@ We are not going to go through creating the buckets themselves. Creating the buc
 - Role name - NameOfYourChoice
 
 Once you have an execution role set up following the guidelines above, we can head over to the AWS Lambda management console to create the function.
+
+## 3. Create the Lambda Function
 
 ## 3. Create the Lambda Function
 
@@ -96,7 +98,7 @@ ImportError: "Unable to import module 'lambda_function': cannot import name '_im
 
 It is difficult to say whether or not you will run into the same issue. For me, it happened, and it didn't go away. After _lots_ of googling, I came to a logical conclusion that it has to do with the amazonlinux environment that my lambda function is running in. The reason why I say a _logical conclusion_ is because I did not get any errors when trying to reproduce the same error in the Python virtual environment that I packaged my function in:
 
-![A screenshot of the terminal showing import errors resulting from Python's Pillow module.](./pillow_screenshot.png)
+![A screenshot of the terminal showing import errors resulting from Python's Pillow module.](create_lambda.png)
 
 After gaining confidence in where the general problem lies in, I narrowed down the issue: the problem seemed to be that the module `PIL` is already installed in the Python version that amazonlinux runs. `PIL` is shipped with Python by default, which is also the case in my local environment, except I can do:
 
@@ -131,6 +133,12 @@ The docker command above does the following:
 - `ubuntu` is the name of an official container, Ubuntu. If this container image isn’t already on your machine, Docker will download it for you.
 
 You should now see something like this:
+
+# <<<<<<< HEAD
+
+You should now see something like this:
+
+> > > > > > > 64f6837c00efc42b048c360ebb5d55c44384b054
 
 ```console
 root@c1996f32a397:/#
