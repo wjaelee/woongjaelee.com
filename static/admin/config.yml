@@ -70,6 +70,67 @@ collections:
       - { label: Content, name: content, widget: 'string' }
       - { label: 'News Date', name: 'newsDate', widget: 'string' }
       - { label: 'Published', name: 'published', widget: 'boolean', default: true }
+  - name: 'projects'
+    label: 'Projects'
+    folder: '_data/projects'
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
+    identifier_field: projectName
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: Category, name: category, widget: string, default: 'projects' }
+      - { label: Project Name, name: projectName, widget: 'string' }
+      - { label: Project Tags, name: projectTags, widget: list }
+      - { label: Project Description, name: projectDescription, widget: 'string' }
+      - { label: Project Link, name: projectLink, widget: 'string' }
+      - { label: Github Repo, name: githubRepo, widget: 'string' }
+      - { label: 'Published', name: 'published', widget: 'boolean', default: true }
+  - name: 'work-experiences'
+    label: 'Work Experiences'
+    folder: '_data/work-experiences'
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
+    identifier_field: company
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: Category, name: category, widget: string, default: 'experiences' }
+      - { label: Company, name: company, widget: string }
+      - { label: Position, name: position, widget: string }
+      - { label: Start Date, name: startDate, widget: string }
+      - { label: End Date, name: endDate, widget: string }
+      - { label: Body, name: body, widget: markdown }
+  - name: 'research'
+    label: 'Research'
+    folder: '_data/research'
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
+    identifier_field: lab
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: Category, name: category, widget: string, default: 'research' }
+      - { label: Lab, name: lab, widget: string }
+      - { label: Position, name: position, widget: string }
+      - { label: Start Date, name: startDate, widget: string }
+      - { label: End Date, name: endDate, widget: string }
+      - { label: Body, name: body, widget: markdown }
+  - name: 'skills'
+    label: 'Skills'
+    folder: '_data/skills'
+    path: '{{slug}}/index'
+    media_folder: ''
+    public_folder: ''
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: Category, name: category, widget: string, default: 'skills' }
+      - { label: Title, name: title, widget: string }
+      - { label: Percentage, name: percentage, widget: number, value_type: int, min: 1, max: 101 }
   - label: 'Site Metadata'
     name: 'site-metadata'
     files:
