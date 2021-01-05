@@ -8,6 +8,6 @@ tags:
 published: true
 cover: 0003_0_0.png
 ---
-![Blog Post Thumbnail](0010_0_0.png "COOL!")
+![Blog Post Thumbnail](0010_0_0.png)
 
 This is just a test.
