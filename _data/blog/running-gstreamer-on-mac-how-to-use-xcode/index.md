@@ -24,8 +24,9 @@ GStreamer is a library for constructing graphs of media-handling components. The
 * In **Xcode > Build Settings > Header Search Paths > Debug**, add /Library/Frameworks/GStreamer.framework/Headers
 * In **Xcode > General > Frameworks and Libraries**, add /Library/Frameworks/GStreamer.framework and drag&drop /Library/Frameworks/GStreamer.framework/Versions/1.0/lib/libgstnet-1.0.0.dylib from Finder. I did not include the dylib file and struggled with the error
 
-3. In **Xcode > Build Phases > Embed Frameworks**, uncheck **Code Sign on Copy**. Otherwise, I encountered the error "Command CodeSign failed with a nonzero exit code".
-4. Do not directly copy&paste tutorial 1 Hello world! example in GStreamer website. The problem was I only hear the audio but not the video. In order to open the video as a new pop-up window when running on xcode, I had to add 
+3. In **Xcode > Build Phases > Embed Frameworks**, uncheck **Code Sign on Copy**. Also, in **Xcode > Signing & Capabilities**, click "+ Capability" in the top left corner and choose "Hardened Runtime". Then turn on "Disable Library Validation" in the list. Otherwise, I encountered the error "Command CodeSign failed with a nonzero exit code".
+
+4. Do not directly copy & paste tutorial 1 Hello world! example in GStreamer website. The problem was I can only hear the audio but not the video. In order to open the video as a new pop-up window when running on xcode, I had to modify the original code and add the following three lines at the appropriate lines.
 
 ```
 GMainLoop *main_loop;
