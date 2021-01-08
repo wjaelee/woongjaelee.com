@@ -8,6 +8,8 @@ tags:
 published: true
 cover: gstreamer_logo.png
 ---
+![Blog Post Thumbnail](gstreamer_logo.png)
+
 ## What is GStreamer?
 
 GStreamer is a library for constructing graphs of media-handling components. The applications it supports range from simple Ogg/Vorbis playback, audio/video streaming to complex audio (mixing) and video (non-linear editing) processing.
@@ -25,16 +27,17 @@ GStreamer is a library for constructing graphs of media-handling components. The
 * In **Xcode > General > Frameworks and Libraries**, add /Library/Frameworks/GStreamer.framework and drag&drop /Library/Frameworks/GStreamer.framework/Versions/1.0/lib/libgstnet-1.0.0.dylib from Finder. I did not include the dylib file and struggled with the error
 
 3. In **Xcode > Build Phases > Embed Frameworks**, uncheck **Code Sign on Copy**. Also, in **Xcode > Signing & Capabilities**, click "+ Capability" in the top left corner and choose "Hardened Runtime". Then turn on "Disable Library Validation" in the list. Otherwise, I encountered the error "Command CodeSign failed with a nonzero exit code".
-
 4. Do not directly copy & paste tutorial 1 Hello world! example in GStreamer website. The problem was I can only hear the audio but not the video. In order to open the video as a new pop-up window when running on xcode, I had to modify the original code and add the following three lines at the appropriate lines.
 
-```
+```c
 GMainLoop *main_loop;
 main_loop = g_main_loop_new (NULL, FALSE);
 g_main_loop_run (main_loop);
 ```
+
 The full tutorial 1 code is below
-```
+
+```c
 //
 //  main.c
 //  gstreamer-tutorials
@@ -75,12 +78,15 @@ int main(int argc, char * argv[]) {
     return 0;
 }
 ```
+
 Tadaa! You are good to go. You should be able to see the video and hear the audio nicely.
 
 ### Stack overflow posts that helped me
+
 https://gitlab.freedesktop.org/gstreamer/gst-docs/-/issues/66
+
+https://stackoverflow.com/questions/58195914/xcode-11-command-codesign-failed-with-a-nonzero-exit-code
 
 https://stackoverflow.com/questions/59253591/xcode-11-2-1-command-codesign-failed-with-a-nonzero-exit-code
 
 https://stackoverflow.com/questions/35137165/gstreamer-1-0-video-from-tutorials-is-not-playing-on-macos
-
