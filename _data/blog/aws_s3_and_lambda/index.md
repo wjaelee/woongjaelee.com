@@ -2,10 +2,10 @@
 category: blog
 title: Resize Images Stored in AWS S3 with AWS Lambda (feat. Docker)
 description: A blog post on how to resize images stored in AWS S3 with AWS Lambda
-date: 2020-04-27
+date: 2020-04-27T00:00:00.000Z
 tags:
   - Web Development
-published: true
+published: false
 cover: ./aws_lambda_s3.png
 ---
 
