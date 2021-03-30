@@ -5,7 +5,7 @@ description: A blog post on deciding which company to choose
 date: 2021-01-10T11:56:08.276Z
 tags:
   - Career
-published: true
+published: false
 cover: robertfrost.jpeg
 ---
 ![Blog Post Thumbnail](robertfrost.jpeg)
